@@ -11,7 +11,7 @@ config.read('my_config.ini')
 FILE_NAME = config.get("Waka", "fileName")
 API_KEY = config.get("Waka", "apiKey")
 BASE_URL = config.get("Waka", "baseUrl")
-START_DATE = datetime.strptime(config.get("Waka", "startDate"), "%Y-%m-%d").date()
+START_DATE = str(datetime.strptime(config.get("Waka", "startDate"), "%Y-%m-%d").date())
 
 
 def prepare_request_header(api_key_in_bytes):
